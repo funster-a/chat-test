@@ -11,7 +11,11 @@ const app = express();
 
 app.use(helmet());
 
-app.use(cors({ origin: process.env.CLIENT_URL || "*" }));
+app.use(
+  cors({
+    origin: "https://chat-test-git-main-300amiri-3131s-projects.vercel.app/",
+  }),
+);
 app.use(express.json());
 
 const limiter = rateLimit({

@@ -1,5 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 
+interface SpeechRecognitionEvent extends Event {
+  results: {
+    [key: number]: {
+      [key: number]: {
+        transcript: string;
+      };
+    };
+  };
+}
+
 export const useVoice = (
   setInputText: React.Dispatch<React.SetStateAction<string>>,
 ) => {
