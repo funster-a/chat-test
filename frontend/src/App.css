@@ -1,0 +1,82 @@
+#root {
+  height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.chat {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  word-break: break-word;
+}
+
+.bubble {
+  max-width: 80%;
+  padding: 8px;
+}
+
+.user {
+  justify-content: flex-end;
+  background-color: rgb(8, 53, 121);
+}
+
+.ai {
+  justify-content: flex-start;
+  background-color: black;
+}
+
+.card {
+  display: flex;
+  gap: 20px;
+  padding: 8px;
+  background-color: rgba(7, 46, 106);
+  border: 2px solid rgb(8, 53, 121);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.loader-dots {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  height: 24px;
+  padding: 8px 12px;
+}
+
+.loader-dots span {
+  width: 8px;
+  height: 8px;
+  background-color: white; /* или другой цвет текста ИИ */
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.loader-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+.loader-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
