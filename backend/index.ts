@@ -13,7 +13,7 @@ app.use(helmet());
 
 app.use(
   cors({
-    origin: "https://chat-test-git-main-300amiri-3131s-projects.vercel.app/",
+    origin: "https://chat-test-khaki-chi.vercel.app/",
   }),
 );
 app.use(express.json());
